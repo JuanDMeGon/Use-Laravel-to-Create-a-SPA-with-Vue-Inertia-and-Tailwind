@@ -1,0 +1,33 @@
+{
+    "texts": [
+        "text-indigo-800",
+        "text-green-400",
+        "text-yellow-500",
+        "text-blue-300",
+        "text-pink-600",
+        "text-red-500",
+        "text-purple-700"
+    ],
+    "backgrounds": [
+        "bg-indigo-500",
+        "bg-green-500",
+        "bg-yellow-500",
+        "bg-blue-500",
+        "bg-pink-500",
+        "bg-red-500",
+        "bg-gray-500",
+        "bg-purple-500"
+    ],
+    "icons": [
+        "AcademicCap",
+        "BookOpen",
+        "ChartPie",
+        "Chat",
+        "Chip",
+        "Cube",
+        "CurrencyDollar",
+        "Database",
+        "LockClosed",
+        "Terminal"
+    ]
+}
