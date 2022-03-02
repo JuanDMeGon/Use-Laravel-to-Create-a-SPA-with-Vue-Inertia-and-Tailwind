@@ -50,15 +50,69 @@
                 >
                     Hey! This is Juan. I'm a Senior Software Engineer and I would be glad to work with you.
                 </p>
+
+                <div class="flex items-end border-b-2 border-gray-500 pb-2">
+                    <p class="
+                        font-bold
+                        mr-5
+                        text-gray-500
+                        text-xl
+                    ">
+                        Want to know more?
+                    </p>
+
+                    <jet-button class="
+                        bg-green-400
+                        rounded
+                        font-bold
+                        text-sm
+                        text-gray-800
+                        hover:bg-green-800
+                    ">
+                        Let's chat
+                    </jet-button>
+                </div>
+            </div>
+
+            <div class="animate-pulse mt-3 text-gray-300 text-center text-9xl">
+                <a href="#skills">&#8675;</a>
             </div>
         </Section>
 
-        <Section class="bg-gray-200 text-gray-800 h-screen">
+        <Section id="skills" class="bg-gray-200 text-gray-800 h-screen">
             <h2 class="text-6xl font-bold pt-3">Skills</h2>
+
+            <div class="flex justify-center mt-10">
+                <jet-button class="
+                    bg-indigo-800
+                    rounded
+                    font-bold
+                    text-sm
+                    text-gray-200
+                    hover:bg-indigo-700
+                ">
+                    Get in touch
+                </jet-button>
+            </div>
+
         </Section>
 
         <Section class="bg-gray-600 text-gray-200 h-screen">
             <h2 class="text-6xl font-bold pt-3">Projects</h2>
+
+            <div class="flex justify-center mt-10">
+                <jet-button class="
+                    bg-purple-100
+                    rounded
+                    font-bold
+                    text-sm
+                    text-gray-800
+                    hover:bg-purple-200
+                ">
+                    Know more
+                </jet-button>
+            </div>
+
         </Section>
 
         <Section
@@ -82,7 +136,10 @@
 <script>
     import { defineComponent } from 'vue'
     import { Head, Link } from '@inertiajs/inertia-vue3'
+
     import JetApplicationMark from '@/Jetstream/ApplicationMark'
+    import JetButton from '@/Jetstream/Button'
+
     import Section from '@/Components/Section'
 
     export default defineComponent({
@@ -90,6 +147,7 @@
             Head,
             Link,
             JetApplicationMark,
+            JetButton,
             Section
         },
 
