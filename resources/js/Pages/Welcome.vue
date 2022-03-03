@@ -134,9 +134,15 @@
         >
             <p>&copy; JuanDMeGon. All right reserved.</p>
             <div class="flex justify-evenly items-center">
-                GitHub
-                Twitter
-                StackOverflow
+                <Link class="border-b pb-1 px-2 hover:text-gray-50" href="#">
+                    GitHub
+                </Link>
+                <Link class="border-b pb-1 px-2 hover:text-gray-50" href="#">
+                    Twitter
+                </Link>
+                <Link class="border-b pb-1 px-2 hover:text-gray-50" href="#">
+                    StackOverflow
+                </Link>
             </div>
         </Section>
     </div>
