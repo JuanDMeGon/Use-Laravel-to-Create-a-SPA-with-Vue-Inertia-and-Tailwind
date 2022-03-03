@@ -67,8 +67,10 @@
                         font-bold
                         text-sm
                         text-gray-800
-                        hover:bg-green-800
-                    ">
+                        hover:bg-green-800"
+
+                        @click="contacting = true"
+                    >
                         Let's chat
                     </jet-button>
                 </div>
@@ -97,8 +99,10 @@
                     font-bold
                     text-sm
                     text-gray-200
-                    hover:bg-indigo-700
-                ">
+                    hover:bg-indigo-700"
+
+                    @click="contacting = true"
+                >
                     Get in touch
                 </jet-button>
             </div>
@@ -125,8 +129,10 @@
                     font-bold
                     text-sm
                     text-gray-800
-                    hover:bg-purple-200
-                ">
+                    hover:bg-purple-200"
+
+                    @click="contacting = true"
+                >
                     Know more
                 </jet-button>
             </div>
@@ -156,6 +162,35 @@
             </div>
         </Section>
     </div>
+    <jet-modal :show="contacting" closeable="true" @close="contacting=null">
+        <div class="bg-gray-50 shadow-2xl p-8">
+            <p class="text-gray-600 text-2xl font-extrabold text-center">Let me know some details</p>
+
+            <form
+                class="flex flex-col items-center p-16"
+            >
+                <jet-input
+                    class="px-5 py-3 w-96 border border-gray-600 rounded"
+                    type="email"
+                    name="email"
+                    placeholder="Your email"
+                ></jet-input>
+
+                <textarea
+                    class="px-5 py-3 w-96 border border-gray-600 rounded mt-5"
+                    name="message"
+                    placeholder="The details :)"
+                ></textarea>
+
+                <jet-button
+                    class="px-5 py-3 mt-5 w-96 bg-purple-400 justify-center rounded-xl text-sm"
+                >
+                    Get in touch
+                </jet-button>
+            </form>
+        </div>
+
+    </jet-modal>
 </template>
 <script>
     import { defineComponent, defineAsyncComponent } from 'vue'
@@ -163,6 +198,8 @@
 
     import JetApplicationMark from '@/Jetstream/ApplicationMark'
     import JetButton from '@/Jetstream/Button'
+    import JetModal from '@/Jetstream/Modal'
+    import JetInput from '@/Jetstream/Input'
 
     import Section from '@/Components/Section'
     import Skill from '@/Components/Skill'
@@ -174,6 +211,8 @@
             Link,
             JetApplicationMark,
             JetButton,
+            JetModal,
+            JetInput,
             Section,
             Skill,
             Project,
@@ -195,6 +234,11 @@
                         + 'Icon.js'
                     )
                 );
+            }
+        },
+        data() {
+            return {
+                contacting: null,
             }
         }
     })
