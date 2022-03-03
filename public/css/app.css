@@ -967,6 +967,10 @@ select {
   margin-left: auto;
   margin-right: auto;
 }
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -1090,6 +1094,9 @@ select {
 .h-2\/3 {
   height: 66.666667%;
 }
+.h-24 {
+  height: 6rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1134,6 +1141,9 @@ select {
 }
 .w-20 {
   width: 5rem;
+}
+.w-24 {
+  width: 6rem;
 }
 .min-w-0 {
   min-width: 0px;
@@ -1331,6 +1341,9 @@ select {
 .border-2 {
   border-width: 2px;
 }
+.border-8 {
+  border-width: 8px;
+}
 .border-b-2 {
   border-bottom-width: 2px;
 }
@@ -1345,6 +1358,9 @@ select {
 }
 .border-r {
   border-right-width: 1px;
+}
+.border-double {
+  border-style: double;
 }
 .border-gray-300 {
   --tw-border-opacity: 1;
@@ -1421,10 +1437,6 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
-.bg-gray-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
-}
 .bg-green-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(74 222 128 / var(--tw-bg-opacity));
@@ -1432,6 +1444,10 @@ select {
 .bg-indigo-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(55 48 163 / var(--tw-bg-opacity));
+}
+.bg-gray-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 .bg-purple-100 {
   --tw-bg-opacity: 1;
@@ -1519,6 +1535,10 @@ select {
   padding-left: 18rem;
   padding-right: 18rem;
 }
+.px-44 {
+  padding-left: 11rem;
+  padding-right: 11rem;
+}
 .pt-6 {
   padding-top: 1.5rem;
 }
@@ -1558,11 +1578,11 @@ select {
 .pb-36 {
   padding-bottom: 9rem;
 }
-.pt-3 {
-  padding-top: 0.75rem;
-}
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+.pt-3 {
+  padding-top: 0.75rem;
 }
 .text-left {
   text-align: left;
@@ -1603,12 +1623,12 @@ select {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
 .text-9xl {
   font-size: 8rem;
+  line-height: 1;
+}
+.text-6xl {
+  font-size: 3.75rem;
   line-height: 1;
 }
 .font-medium {
@@ -1619,6 +1639,9 @@ select {
 }
 .font-bold {
   font-weight: 700;
+}
+.font-extrabold {
+  font-weight: 800;
 }
 .uppercase {
   text-transform: uppercase;
