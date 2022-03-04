@@ -1059,6 +1059,9 @@ select {
 .mr-1 {
   margin-right: 0.25rem;
 }
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
 .block {
   display: block;
 }
@@ -1113,6 +1116,9 @@ select {
 .h-2\/3 {
   height: 66.666667%;
 }
+.h-2 {
+  height: 0.5rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1163,6 +1169,9 @@ select {
 }
 .w-96 {
   width: 24rem;
+}
+.w-2 {
+  width: 0.5rem;
 }
 .min-w-0 {
   min-width: 0px;
@@ -1553,6 +1562,9 @@ select {
 }
 .p-16 {
   padding: 4rem;
+}
+.p-3 {
+  padding: 0.75rem;
 }
 .px-4 {
   padding-left: 1rem;

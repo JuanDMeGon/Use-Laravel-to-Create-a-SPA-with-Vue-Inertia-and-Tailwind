@@ -34,7 +34,3 @@ Route::post('contact', [ContactController::class, 'contact'])
 // Route::get('/test', function () {
 //     return new ContactedMessage('test@test.com', 'Just testing.');
 // });
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->name('dashboard');
