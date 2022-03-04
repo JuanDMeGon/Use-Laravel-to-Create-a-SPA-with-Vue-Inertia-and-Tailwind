@@ -963,6 +963,12 @@ select {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
+.m-5 {
+  margin: 1.25rem;
+}
+.m-2 {
+  margin: 0.5rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1710,6 +1716,14 @@ select {
 }
 .text-6xl {
   font-size: 3.75rem;
+  line-height: 1;
+}
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+.text-5xl {
+  font-size: 3rem;
   line-height: 1;
 }
 .font-medium {

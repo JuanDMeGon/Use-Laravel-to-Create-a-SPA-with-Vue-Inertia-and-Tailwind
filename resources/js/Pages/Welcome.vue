@@ -71,7 +71,9 @@
 
                         @click="contacting = true"
                     >
-                        Let's chat
+                        {{
+                            $page.props.flash.contacted ? 'Thanks!' : 'Let\'s chat'
+                        }}
                     </jet-button>
                 </div>
             </div>
@@ -103,7 +105,9 @@
 
                     @click="contacting = true"
                 >
-                    Get in touch
+                    {{
+                        $page.props.flash.contacted ? 'Thanks!' : 'Get in touch'
+                    }}
                 </jet-button>
             </div>
 
@@ -133,7 +137,9 @@
 
                     @click="contacting = true"
                 >
-                    Know more
+                    {{
+                        $page.props.flash.contacted ? 'Thanks!' : 'Know more'
+                    }}
                 </jet-button>
             </div>
 
@@ -163,7 +169,16 @@
         </Section>
     </div>
     <jet-modal :show="contacting" closeable="true" @close="contacting=null">
-        <div class="bg-gray-50 shadow-2xl p-8">
+        <div
+            class="bg-green-400 shadow-2xl p-8 text-center font-bold"
+            v-if="$page.props.flash.contacted"
+        >
+            <p class="text-8xl m-5">👍</p>
+            <p class="text-5xl font-bold m-2">Thanks!</p>
+            <p class="text-xl m-2">I'll get back to you soon.</p>
+        </div>
+
+        <div class="bg-gray-50 shadow-2xl p-8" v-else>
             <p class="text-gray-600 text-2xl font-extrabold text-center">Let me know some details</p>
 
             <form
