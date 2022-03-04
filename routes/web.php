@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Models\Project;
 use App\Models\Skill;
 use Illuminate\Foundation\Application;
@@ -25,6 +26,9 @@ Route::get('/', function () {
         'projects' => Project::all(),
     ]);
 });
+
+Route::post('contact', [ContactController::class, 'contact'])
+    ->name('contact');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');

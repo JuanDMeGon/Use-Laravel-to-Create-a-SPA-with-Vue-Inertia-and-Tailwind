@@ -168,18 +168,21 @@
 
             <form
                 class="flex flex-col items-center p-16"
+                @submit.prevent="submit"
             >
                 <jet-input
                     class="px-5 py-3 w-96 border border-gray-600 rounded"
                     type="email"
                     name="email"
                     placeholder="Your email"
+                    v-model="form.email"
                 ></jet-input>
 
                 <textarea
                     class="px-5 py-3 w-96 border border-gray-600 rounded mt-5"
                     name="message"
                     placeholder="The details :)"
+                    v-model="form.message"
                 ></textarea>
 
                 <jet-button
@@ -234,11 +237,19 @@
                         + 'Icon.js'
                     )
                 );
+            },
+            submit()
+            {
+                this.form.post(route('contact'));
             }
         },
         data() {
             return {
                 contacting: null,
+                form: this.$inertia.form({
+                    'email': '',
+                    'message': '',
+                }),
             }
         }
     })
