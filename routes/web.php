@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Mail\ContactedMessage;
 use App\Models\Project;
 use App\Models\Skill;
 use Illuminate\Foundation\Application;
@@ -29,6 +30,10 @@ Route::get('/', function () {
 
 Route::post('contact', [ContactController::class, 'contact'])
     ->name('contact');
+
+// Route::get('/test', function () {
+//     return new ContactedMessage('test@test.com', 'Just testing.');
+// });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
