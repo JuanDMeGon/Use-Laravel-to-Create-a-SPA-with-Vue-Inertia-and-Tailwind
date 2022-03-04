@@ -1050,6 +1050,9 @@ select {
 .mr-5 {
   margin-right: 1.25rem;
 }
+.mr-1 {
+  margin-right: 0.25rem;
+}
 .block {
   display: block;
 }
@@ -1221,6 +1224,22 @@ select {
 .animate-pulse {
   -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
           animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@-webkit-keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
 }
 .cursor-default {
   cursor: default;

@@ -25794,9 +25794,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Jetstream_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Jetstream/Button */ "./resources/js/Jetstream/Button.vue");
 /* harmony import */ var _Jetstream_Modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Jetstream/Modal */ "./resources/js/Jetstream/Modal.vue");
 /* harmony import */ var _Jetstream_Input__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Jetstream/Input */ "./resources/js/Jetstream/Input.vue");
-/* harmony import */ var _Components_Section__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Components/Section */ "./resources/js/Components/Section.vue");
-/* harmony import */ var _Components_Skill__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/Components/Skill */ "./resources/js/Components/Skill.vue");
-/* harmony import */ var _Components_Project__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/Components/Project */ "./resources/js/Components/Project.vue");
+/* harmony import */ var _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Jetstream/InputError */ "./resources/js/Jetstream/InputError.vue");
+/* harmony import */ var _Components_Section__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/Components/Section */ "./resources/js/Components/Section.vue");
+/* harmony import */ var _Components_Skill__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/Components/Skill */ "./resources/js/Components/Skill.vue");
+/* harmony import */ var _Components_Project__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/Components/Project */ "./resources/js/Components/Project.vue");
+
 
 
 
@@ -25814,9 +25816,10 @@ __webpack_require__.r(__webpack_exports__);
     JetButton: _Jetstream_Button__WEBPACK_IMPORTED_MODULE_3__["default"],
     JetModal: _Jetstream_Modal__WEBPACK_IMPORTED_MODULE_4__["default"],
     JetInput: _Jetstream_Input__WEBPACK_IMPORTED_MODULE_5__["default"],
-    Section: _Components_Section__WEBPACK_IMPORTED_MODULE_6__["default"],
-    Skill: _Components_Skill__WEBPACK_IMPORTED_MODULE_7__["default"],
-    Project: _Components_Project__WEBPACK_IMPORTED_MODULE_8__["default"]
+    JetInputError: _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_6__["default"],
+    Section: _Components_Section__WEBPACK_IMPORTED_MODULE_7__["default"],
+    Skill: _Components_Skill__WEBPACK_IMPORTED_MODULE_8__["default"],
+    Project: _Components_Project__WEBPACK_IMPORTED_MODULE_9__["default"]
   },
   props: {
     canLogin: Boolean,
@@ -30426,8 +30429,9 @@ var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Get in touch ");
-
+var _hoisted_25 = {
+  "class": "animate-spin mr-1"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Head = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Head");
 
@@ -30444,6 +30448,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Project = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Project");
 
   var _component_jet_input = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("jet-input");
+
+  var _component_jet_input_error = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("jet-input-error");
 
   var _component_jet_modal = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("jet-modal");
 
@@ -30663,7 +30669,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         })
       }, null, 8
       /* PROPS */
-      , ["modelValue"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
+      , ["modelValue"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_input_error, {
+        message: _ctx.form.errors.email
+      }, null, 8
+      /* PROPS */
+      , ["message"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
         "class": "px-5 py-3 w-96 border border-gray-600 rounded mt-5",
         name: "message",
         placeholder: "The details :)",
@@ -30672,16 +30682,27 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         })
       }, null, 512
       /* NEED_PATCH */
-      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.form.message]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_button, {
-        "class": "px-5 py-3 mt-5 w-96 bg-purple-400 justify-center rounded-xl text-sm"
+      ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.form.message]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_input_error, {
+        message: _ctx.form.errors.message
+      }, null, 8
+      /* PROPS */
+      , ["message"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_button, {
+        "class": "px-5 py-3 mt-5 w-96 bg-purple-400 justify-center rounded-xl text-sm",
+        disabled: _ctx.form.processing
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [_hoisted_25];
+          return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_25, " ◠ ", 512
+          /* NEED_PATCH */
+          ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, _ctx.form.processing]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, " Get in touch ", 512
+          /* NEED_PATCH */
+          ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vShow, !_ctx.form.processing]])];
         }),
         _: 1
         /* STABLE */
 
-      })], 32
+      }, 8
+      /* PROPS */
+      , ["disabled"])], 32
       /* HYDRATE_EVENTS */
       )])];
     }),
