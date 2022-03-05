@@ -54,4 +54,11 @@ class SkillController extends Controller
 
         return redirect()->route('skills.index');
     }
+
+    public function destroy(Skill $skill)
+    {
+        $skill->delete();
+
+        return redirect()->route('skills.index');
+    }
 }
