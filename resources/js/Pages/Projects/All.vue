@@ -19,7 +19,11 @@
                         font-bold
                         rounded-xl
                     "
-                    @click="acting = true"
+                    @click="
+                        acting = true;
+                        method = 'post';
+                        action = route('projects.store');
+                    "
                 >
                     Add New +
                 </jet-button>
@@ -134,6 +138,15 @@
                             <td class="px-6 py-4">
                                 <jet-button
                                     class="border border-indigo-500 text-indigo-500 bg-indigo-50 hover:bg-indigo-100 mr-2"
+                                    @click="
+                                        acting = true;
+                                        method = 'put';
+                                        action = route('projects.update', [project.id])
+                                        form.title = project.title;
+                                        form.description = project.description;
+                                        form.color = project.color;
+                                        form.icon_name = project.icon_name;
+                                    "
                                 >
                                     Edit
                                 </jet-button>
@@ -187,7 +200,7 @@
             },
             submit()
             {
-                this.form.submit('post', route('projects.store') , {
+                this.form.submit(this.method, this.action , {
                     onSuccess: () => {
                         this.form.reset('title');
                         this.form.reset('description');
@@ -201,6 +214,8 @@
         data() {
             return {
                 acting: null,
+                method: null,
+                action: null,
                 form: this.$inertia.form({
                     'title': '',
                     'description': '',
